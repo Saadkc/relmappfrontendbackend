@@ -7,6 +7,7 @@ export const postLogin = async (username, password) => {
     console.log(response.data.token);
     const token = response.data.token;
     localStorage.setItem("token", token);
+    
     return response.data;
   } catch (error) {
     console.error(error);
@@ -86,7 +87,7 @@ export const userprofile = async (userId, token, profileData) => {
     if (response.ok) {
       // Handle successful form submission
       const responseData = await response.json();
-      console.log(responseData);
+      
       return responseData;
     } else {
       // Handle form submission failure
