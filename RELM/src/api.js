@@ -69,9 +69,6 @@ export const postLogin = async (username, password) => {
 // }
 
 
-
-
-
 export const userprofile = async (userId, token, profileData) => {
   const formData = new FormData();
   formData.append('name', profileData.name);
