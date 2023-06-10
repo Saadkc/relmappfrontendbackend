@@ -12,8 +12,8 @@ const jwt = require('jsonwebtoken');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json());
+app.use(express.static('uploads'));
 app.use(cors());
-app.use('/uploads', express.static('uploads'));
 
 
 const authorization = async function (req, res, next) {
